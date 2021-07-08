@@ -4,6 +4,7 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "dependencies": {
+    "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
     "body-parser": "^1.19.0",
     "cors": "^2.8.5",
@@ -21,7 +22,7 @@
   },
   "scripts": {
     "server": "nodemon --watch server --exec babel-node",
-    "start": "babel-node server/app.js",
+    "start": "./node_modules/babel/bin/babel-node server/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
