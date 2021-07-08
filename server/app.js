@@ -41,6 +41,6 @@ mongoose.connection.on("disconnected", (err) => {
   console.log(`Database disconnected`);
 });
 
-app.listen(5000, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log("Server runs at http://localhost:5000");
 });
