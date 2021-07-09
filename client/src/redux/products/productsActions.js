@@ -11,7 +11,7 @@ import {
 export const getProductsList = () => async (dispatch) => {
   try {
     dispatch({ type: PRODUCTS_LIST_REQUEST });
-    const { data } = await axios.get("/api/products");
+    const { data } = await axios.get("https://e-commerce-react-ika.herokuapp.com/api/products");
     dispatch({ type: PRODUCTS_LIST_SUCCESS, payload: data  });
   } catch (error) {
     dispatch({ type: PRODUCTS_LIST_FAILURE, payload: error.message });
@@ -21,7 +21,7 @@ export const getProductsList = () => async (dispatch) => {
 export const getProductDetails = (productID) => async (dispatch) => {
   try {
     dispatch({ type: PRODUCT_DETAILS_REQUEST, payload: productID });
-    const { data } = await axios.get("/api/products/" + productID);
+    const { data } = await axios.get("https://e-commerce-react-ika.herokuapp.com/api/products/" + productID);
     dispatch({ type: PRODUCT_DETAILS_SUCCESS, payload: data });
   } catch (error) {
     dispatch({ type: PRODUCT_DETAILS_FAILURE, payload: error.message });
