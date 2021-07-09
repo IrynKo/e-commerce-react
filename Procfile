@@ -1,1 +1,0 @@
-worker: babel-node server/app.js
